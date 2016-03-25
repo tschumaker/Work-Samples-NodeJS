@@ -14,5 +14,7 @@ called from the workflow engine, and does the following:
   and attempts to send a notification email out to the recipient. Again, if it fails, it handles the logging of that error, else
   it completes and finishes successfully.
 
-   
+  The sendEmail() function also gets the lastcomment "date", which is stored in UTC on the server, and instantiates and formats
+  the date/time using the moment 3rd party lib.
+  
 -Troy Schumaker
