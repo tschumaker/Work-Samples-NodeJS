@@ -29,9 +29,8 @@ module.exports = (function () {
                             
                             var lastComment = workorder.comments.slice(-1)[0];
                             console.log("WorkorderNewComments::checking last comment for workorder#: " + workorder._id);                            
-                            if ( lastComment ) {  //  normal workflow would have this setup as: lastComment.type == "motili"
+                            if ( lastComment ) { 
                                 lastComment.formattedDate = moment(lastComment.date).tz(tz).format("MMM Do YYYY, h:mm a"); // user's time zone
-                                //console.log("WorkorderNewCommentsToMotili::lastComment is: " + lastComment + " and formattedDate is: " + lastComment.formattedDate);
                             }
 
                             workorder.lastcomment = lastComment;
